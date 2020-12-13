@@ -1,0 +1,174 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Noah Ray Roberts</title>
+    <meta name="description" content="Personal Portfolio Website for Noah Ray Roberts. Hi, I am a full-stack web developer. Check out my work, resume, social, and contact info here!" />
+    <meta name="author" content="Noah Ray Roberts">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <link rel="canonical" href="https://noahrayroberts.com/" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Home - Noah Ray Roberts" />
+    <meta property="og:description" content="Personal Portfolio Website for Noah Ray Roberts. Hi, I am a full-stack web developer. Check out my work, resume, social, and contact info here!" />
+    <meta property="og:url" content="https://noahrayroberts.com/" />
+    <meta property="og:site_name" content="Noah Ray Roberts" />
+    <meta property="og:image" content="{{url_for('static', filename='images/Screen-Shot-2020-11-23-at-2.03.11-PM.png')}}" />
+    <meta property="og:image:width" content="3568" />
+    <meta property="og:image:height" content="2258" />
+
+    <link rel="stylesheet" href="{{url_for('static', filename='css/portfolio.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/featured.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/header.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/footer.css')}}">
+
+</head>
+
+<body id="big_body">
+
+    <div id="fakeHeader">
+        <div class="fakeHeaderLeft">
+            <div><span id="fakeHeaderLeftHOME">NoahRayRoberts</span></div>
+        </div>
+        <div class="fakeheaderRight">
+            <div><span id="fakeHeaderPortfolio">Portfolio</span></div>
+            <div><span class="fakeHeaderAbout">About Me</span></div>
+            <div><span class="fakeHeaderSocial">Social/Contact</span></div>
+        </div>
+        <svg width="20" height="20" class="bi bi-list hamRightHeader hamham" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+        </svg>
+    </div>
+
+    <div class="hamRightHeader-dropdown">
+        <div><span id="fakeHeaderPortfolioH">Portfolio</span></div>
+        <div><span class="fakeHeaderAboutH">About Me</span></div>
+        <div><span class="fakeHeaderSocialH">Social/Contact</span></div>
+        <div><span class="exitFake"><i class="fas fa-times"></i></span></div>
+    </div>
+    <div class="greyout"></div>
+
+    <div class="full-page-spacer">
+        <div class="bighello_cont">
+            <h4 id="bighello">Hello</h4>
+            <p class="center_text under_big_hello">i'm a junior full stack web developer</p>
+            <button id="see_port_btn">See Portfolio</button>
+        </div>
+        <svg width="30" height="30" fill="currentColor" class="arrow_down" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4z"/>
+            <!-- <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/> -->
+        </svg>
+    </div>
+
+    <div class="center_header" id="Portfolio_highlights_loc">
+        <div class="center_header_cont">
+            <h4>Full Stack Web Developer?</h4>
+            <p>I design stunning websites & code advanced funcitonality into them,
+             check out my projects below!</p>
+            <button class="see_resume_btn">See Resume</button>
+        </div>
+    </div>
+
+    <div class="cont">
+        <div id="a1">
+            <p><b><span class="yellow_highlight">Featured</span> Projects:</b><br>projects are clickable - to github
+            </p>
+        </div>
+        <div id="projectNexusOrg" class="switchWebsite no2" onclick="window.open('https://gist.github.com/NoahRR/9c12e841502d5dff0fb79a4bc3255d78');"></div>
+        <div class="cs50pros" style="background-color: #B2A9E9;" onclick="window.open('https://github.com/NoahRR/CS50-projects/tree/master/finance', '_blank');"><p>Stock Trading Web App<br><span>Python | API</span></p></div>
+        <div id="commLineAPI" onclick="window.open('https://github.com/NoahRR/Command-Line-Help-API', '_blank');"><p>Command Line Help Tool - JSON REST API<br><span>Flask | Flask-Restful | SQLAlchemy | Flask-Migrate</span></p></div>
+        <div id="projectNexusOrg" class="switchWebsite no1" onclick="window.open('https://gist.github.com/NoahRR/9c12e841502d5dff0fb79a4bc3255d78');"></div>
+        <div class="cs50pros" style="background-color: #FFD35C;" onclick="window.open('https://github.com/NoahRR/CS50-projects/tree/master/pset7/houses', '_blank');"><p>SQL Applied<br><span>Python | SQL</span></p></div>
+        <div class="cs50pros" style="background-color: #4DC9E4;" onclick="window.open('https://github.com/NoahRR/CS50-projects/tree/master/pset6/dna', '_blank');"><p>DNA Identifier<br><span>Python</span></p></div>
+    </div>
+
+    <div id="full_portfolio_list_cont">
+        <p><b><span class="yellow_highlight">Full</span> Portfolio:</b><br>shows all projects - click to see github repo</p>
+        <div class="small_spacer" style="border-bottom: 1px solid #DBDBDB;"></div>
+
+        {% for proj_id in full_project_data %}
+        <!-- <p>{{ full_project_data[proj_id]['name'] }}</p> -->
+            <div class="list_project">
+                <div class="list_project_title">{{ full_project_data[proj_id]['name'] }}</div>
+                <div class="list_project_time">{{ full_project_data[proj_id]['time'] }}</div>
+                <div class="list_project_tech">{{ full_project_data[proj_id]['tech'] }}</div>
+                <div class="list_project_link">
+                    {% if full_project_data[proj_id]['link'] %}
+                        <svg onclick="window.open('{{ full_project_data[proj_id]['link'] }}', '_blank')" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                        </svg>
+                    {% endif %}
+                    {% if full_project_data[proj_id]['link2'] %}
+                        <svg onclick="window.open('{{ full_project_data[proj_id]['link2'] }}', '_blank')" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                              <path fill-rule="evenodd" d="M5.172 10.828a.5.5 0 0 0 .707 0l4.096-4.096V9.5a.5.5 0 1 0 1 0V5.525a.5.5 0 0 0-.5-.5H6.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707z"/>
+                        </svg>
+                    {% endif %}
+                </div>
+            </div>
+        {% endfor %}
+
+        <!-- <div class="list_project"> -->
+        <!--     <div class="list_project_title">NexusOrganizer.com</div> -->
+        <!--     <div class="list_project_time">4 months</div> -->
+        <!--     <div class="list_project_tech">Django | PostgreSQL | JS-HTML-CSS</div> -->
+        <!--     <div class="list_project_link"> -->
+        <!--         <svg onclick="window.open('https://gist.github.com/NoahRR/9c12e841502d5dff0fb79a4bc3255d78', '_blank')" width="18" height="18" fill="currentColor" viewBox="0 0 16 16"> -->
+        <!--             <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/> -->
+        <!--         </svg> -->
+        <!--         <svg onclick="window.open('https://www.nexusorganizer.com/', '_blank')" width="18" height="18" fill="currentColor" viewBox="0 0 16 16"> -->
+        <!--             <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/> -->
+        <!--               <path fill-rule="evenodd" d="M5.172 10.828a.5.5 0 0 0 .707 0l4.096-4.096V9.5a.5.5 0 1 0 1 0V5.525a.5.5 0 0 0-.5-.5H6.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707z"/> -->
+        <!--         </svg> -->
+        <!--     </div> -->
+        <!-- </div> -->
+
+        <!-- <div class="list_project"> -->
+        <!--     <div class="list_project_title">This Website!</div> -->
+        <!--     <div class="list_project_time">2 days</div> -->
+        <!--     <div class="list_project_tech">Flask | SQLite | JS-HTML-CSS</div> -->
+        <!--     <div class="list_project_link"> -->
+        <!--         <svg onclick="window.open('', '_blank')" width="18" height="18" fill="currentColor" viewBox="0 0 16 16"> -->
+        <!--             <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/> -->
+        <!--         </svg> -->
+        <!--     </div> -->
+        <!-- </div> -->
+
+
+
+    </div>
+
+    <div class="footerCustom">
+        <div class="footerCustom_inside">
+            <div class="footerCustomLeft footersty">
+                <div>
+                    <a target="_blank" href="https://www.linkedin.com/in/noahrayroberts/">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212h-2.4s.03-6.547 0-7.225h2.4v1.023a5.54 5.54 0 0 0-.016.025h.016v-.025c.32-.493.89-1.193 2.165-1.193 1.58 0 2.764 1.033 2.764 3.252v4.143h-2.4V9.529c0-.972-.348-1.634-1.217-1.634-.664 0-1.059.447-1.233.878-.063.154-.079.37-.079.586v4.035z"/>
+                        </svg>
+                    </a>
+                    <a target="_blank" href="https://github.com/NoahRR">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                        </svg>
+                    </a>
+                    <a target="_blank" href="https://www.youtube.com/c/NoahRayRoberts">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.122C.002 7.343.01 6.6.064 5.78l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footerCustomRight footersty">
+                <div><a style="text-decoration: none; letter-spacing: .5px;" href="mailto:noahray216@gmail.com">noahray216@gmail.com</a></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{url_for('static', filename='js/portfolio.js')}}"></script>
+</body>
+</html>

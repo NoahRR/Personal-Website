@@ -1,0 +1,132 @@
+.hamRightHeader{
+    right: 10%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0 15px;
+    display: none;
+}
+.hamRightHeader-dropdown{
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    color: white;
+    transform: translate(-50%, -50%);
+    position: fixed;
+    display: none;
+    z-index: 99995;
+    font-weight: 500;
+    font-size: 20px;
+}
+.hamRightHeader-dropdown div{
+    transition: color .3s;
+    cursor: pointer;
+    user-select: none;
+}
+.hamRightHeader-dropdown div:hover{
+    color: #f7b500;
+}
+.hamham{
+    transition: color .3s;
+}
+.hamham:hover{
+    color: #f7b500;
+}
+.greyout{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background-color: black;
+    opacity: .7;
+    display: none;
+    z-index: 99991;
+}
+#fakeHeader{
+    height: 50px;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999 !important;
+    background-color: white;
+    border-bottom: 1px solid #EDEDED;
+    font-weight: 600;
+    color: var(--dark_grey);
+}
+.fakeHeaderLeft{
+    height: 100%;
+    width: 40%;
+    left: 10%;
+    position: absolute;
+    white-space: nowrap;
+}
+.fakeHeaderLeft div{
+    display: inline-block;
+    padding: 0 15px;
+    text-align: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.fakeHeaderLeft div span{
+    cursor: pointer;
+    transition: color .3s;
+}
+.fakeHeaderLeft div span:hover{
+    color: #f7b500;
+}
+.fakeheaderRight{
+    height: 100%;
+    width: 40%;
+    right: 10%;
+    position: absolute;
+    text-align: right;
+    white-space: nowrap;
+}
+.fakeheaderRight div{
+    display: inline-block;
+    padding: 0 15px;
+    text-align: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.fakeheaderRight div span{
+    cursor: pointer;
+    transition: color .3s;
+}
+.fakeheaderRight div span:hover{
+    color: #f7b500;
+}
+#fakeHeader p{
+    position: relative;
+    text-align: left;
+    padding: 0 15px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+#fakeHeader p span{
+    transition: color .3s;
+    cursor: pointer;
+}
+#fakeHeader p span:hover{
+    color: #f7b500;
+}
+
+@media only screen and (max-width: 690px) {
+    .fakeheaderRight{
+        display: none;
+    }
+    .hamRightHeader{
+        display: unset;
+    }
+}
+@media only screen and (max-width: 209px) {
+    .fakeHeaderLeft{
+        display: none;
+    }
+}
+

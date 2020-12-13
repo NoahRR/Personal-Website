@@ -1,0 +1,94 @@
+.footerCustom{
+    height: 110px;
+    width: 100%;
+    /* max-width: 1000px; */
+    background-color: black;
+    position: relative;
+}
+.footerCustom_inside{
+    height: 100%;
+    width: 100%;
+    max-width: 1500px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.footersty{
+    color: white;
+    height: auto;
+}
+.footerCustomLeft div{
+    top: 50%;
+    position: absolute;
+    transform: translateY(-50%);
+    height: auto;
+    margin: 0 23px;
+    width: auto;
+}
+.footerCustomLeft div a{
+    position: relative;
+    margin: 0 13px;
+    cursor: pointer;
+    color: white;
+    transition: color .3s;
+    text-decoration: none;
+}
+.footerCustomLeft div a svg{
+    transition: color .3s;
+}
+.bi-linkedin:hover{
+    color: #0072b1;
+}
+.bi-github:hover{
+    color: #A0A0A0;
+}
+.bi-youtube:hover{
+    color: #c4302b;
+}
+.iconENVY{
+    display: none !important;
+    transition: color .3s;
+}
+.iconENVY:hover{
+    color: #f7b500;
+}
+.footerCustomLeft{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    left: 0;
+}
+.footerCustomRight{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    right: 0;
+    text-align: right;
+}
+.footerCustomRight div{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+}
+.footerCustomRight div a {
+    color: white;
+    padding: 0 23px 0 0;
+    transition: color .3s;
+}
+.footerCustomRight div a:hover {
+    color: #f7b500;
+}
+@media only screen and (max-width: 380px) {
+    .footerCustomLeft{
+        width: 100%;
+        position: absolute;
+    }
+    .footerCustomRight{
+        display: none;
+    }
+    .iconENVY{
+        display: unset !important;
+    }
+}
+

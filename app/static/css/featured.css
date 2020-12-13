@@ -1,0 +1,309 @@
+
+.cont{
+  display: grid;
+  /*grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));*/
+  /*grid-template-rows: repeat(3, 300px);*/
+  grid-gap: 1rem;
+  grid-auto-flow: dense;
+  grid-auto-rows: 300px;
+  max-width: 1500px;
+  padding: 20px 20px;
+  border-radius: 10px;
+  position: relative;
+  left: 50%;
+  top: -50px;
+  transform: translateX(-50%);
+  /* padding-bottom: 0; */
+  /* background-color: #F6F6F6; */
+}
+.cont div{
+  background-color: #E8E8E8;
+  background-color: #F6F6F6;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: filter .4s;
+}
+.cont div p{
+    position: relative;
+    text-align: center;
+    top: 50%;
+    padding: 20px;
+    transform: translateY(-50%);
+    font-weight: 600;
+}
+.cont div p span{
+    font-weight: 400;
+    color: white;
+}
+.cont div i{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+.cont div:hover{
+  /*box-shadow: 0px 0px 9px -2px rgba(143,143,143,1);*/
+  box-shadow: 0px 0px 9px -2px black;
+}
+#a1{
+    grid-row: span 1;
+    cursor: unset;
+    /* background-color: var(--yellow); */
+    /* background-color: var(--default_yellow); */
+    color: var(--dark_grey);
+}
+#a1 p {
+    position: relative;
+    text-align: center;
+    top: 50%;
+    padding: 20px;
+    transform: translateY(-50%);
+    font-weight: 400;
+}
+.yellow_highlight{
+    font-size: 1em !important;
+    color: var(--default_yellow) !important;
+    font-weight: 600 !important;
+}
+#a1:hover{
+    box-shadow: none;
+}
+#projectNexusOrg{
+    grid-column: span 3;
+    grid-row: span 2;
+    background-image: url("https://noahrayroberts.com/wp-content/uploads/2020/11/Screen-Shot-2020-11-17-at-3.48.20-PM.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: var(--green);
+}
+#outdatedportfolio{
+    grid-column: span 1;
+    background-image: url('https://noahrayroberts.com/wp-content/uploads/2020/11/Screen-Shot-2020-11-17-at-11.28.46-AM.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-color: var(--lightorange);
+}
+#cs50-finance{
+    grid-column: span 1;
+    background-image: url('https://noahrayroberts.com/wp-content/uploads/2020/11/Screen-Shot-2020-11-17-at-1.11.46-PM.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-color: var(--blue);
+}
+#CS50all{
+    grid-column: span 3;
+    background-color: black;
+}
+#CS50all p {
+    color: white;
+    font-weight: 500;
+    font-size: 25px;
+}
+#CS50all p span {
+    color: #C6C6C6;
+    font-weight: 100;
+    font-size: 20px;
+    font-style: italic;
+}
+#CS50all:hover{
+    box-shadow: 0px 0px 10px -2px black;
+}
+.projselection{
+    opacity: .5;
+}
+.projselection:hover{
+    background-color: #f7b500 !important;
+}
+.sw2{
+    display: none;
+}
+.no2{
+    display: none;
+}
+#youtube{
+    background-color: var(--red);
+}
+#soundcloud{
+    background-color: var(--orange);
+}
+#technolGIE{
+    grid-column: span 1;
+    color: var(--dark_grey);
+}
+#commLineAPI{
+    grid-column: span 2;
+    background-color: var(--pink);
+    color: white;
+    font-weight: 500;
+    font-size: 1.1em;
+}
+#commLineAPI span {
+    font-weight: 400;
+    font-size: .9em;
+    font-style: italic;
+}
+.cs50pros{
+    color: white;
+    font-weight: 500;
+}
+.cs50pros p a{
+    color: white;
+}
+.cs50pros span {
+    font-weight: 100;
+    font-style: italic;
+}
+#projfilter{
+    cursor: unset;
+    align-items: center;
+    text-align: center;
+}
+#projfilter p{
+    position: relative;
+    text-align: center;
+    top: 50%;
+    padding: 20px;
+    transform: translateY(-50%);
+}
+#projfilter button{
+    display: block;
+    margin: 5px 5px;
+    background-color: #E4E4E4;
+    background-color: #FFD35C;
+    background-color: #F7B500;
+    padding: 13px 13px;
+    outline: none;
+    border: none;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: background-color .3s;
+}
+#projfilter button:hover{
+    background-color: #DCDCDC;
+    background-color: black;
+}
+
+@media only screen and (min-width: 1330px) {
+    .cont{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+@media only screen and (max-width: 1330px) {
+    .cont{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    #projectNexusOrg{
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+    #a1{
+        grid-column: span 1;
+        grid-row: span 1; 
+    }
+    #projfilter{
+        display: none;
+    }
+    .sw1{
+        display: none;
+    }
+    /* .sw2{ */
+    /*     display: unset; */
+    /* } */
+    #CS50all{
+        grid-column: span 2;
+    }
+    #techHeading{
+        grid-column: span 3;
+    }
+    #technolGIE{
+        grid-column: span 2;
+    }
+    .githubLinkproj{
+        display: none;
+    }
+    #commLineAPI{
+        grid-column: span 1;
+    }
+}
+@media only screen and (max-width: 1015px) {
+    .cont{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    #a1{
+        grid-column: span 2;
+    }
+    #projectNexusOrg{
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+    #outdatedportfolio{
+        grid-column: span 1;
+        grid-row: span 1; 
+    }
+    #cs50-finance{
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+    #bx3{
+        display: none;
+    }
+    #techHeading{
+        grid-column: span 2;
+    }
+    #technolGIE{
+        grid-column: span 2;
+    }
+}
+@media only screen and (max-width: 695px) {
+    .cont{
+        grid-template-columns: 1fr;
+    }
+    #projectNexusOrg{
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+    #outdatedportfolio{
+        grid-column: span 1;
+        grid-row: span 1; 
+    }
+    #cs50-finance{
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+    #CS50all{
+        grid-column: span 1;
+    }
+    #a1{
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+    .cont{
+      grid-template-columns: 1fr;
+    }
+    #projfilter{
+        display: none;
+    }
+    #bx2{
+        display: none;
+    }
+    .no1{
+        display: none;
+    }
+    .no2{
+        display: unset;
+    }
+    #techHeading{
+        grid-column: span 1;
+    }
+    #technolGIE{
+        grid-column: span 1;
+    }
+    #commLineAPI{
+        grid-column: span 1;
+    }
+}

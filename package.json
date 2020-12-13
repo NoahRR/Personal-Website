@@ -1,0 +1,19 @@
+{
+  "name": "noah_ray_roberts",
+  "version": "1.0.0",
+  "description": "Personal Portfolio Website for Noah Ray Roberts. Hi, I am a full-stack web developer. Check out my work, resume, social, and contact info here!",
+  "main": "run.py",
+  "scripts": {
+    "test": "python3 run.py"
+  },
+  "author": "Noah Ray Roberts",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.13",
+    "grunt": "^1.3.0",
+    "grunt-contrib-watch": "^1.1.0"
+  },
+  "dependencies": {
+    "bootstrap-icons": "^1.2.1"
+  }
+}
