@@ -152,7 +152,7 @@ button:hover{
     position: relative;
     height: auto;
     width: calc(100% - 40px - 40px );
-    max-width: 1500px;
+    max-width: calc(1500px - 40px);
     top: -50px;
     left: 50%;
     transform: translateX(-50%);
@@ -166,6 +166,28 @@ button:hover{
     position: relative;
     width: 100%;
     height: 50px;
+    font-size: .9em;
+    color: grey;
+}
+.small_spacer_name{
+    position: absolute;
+    left: 20px;
+    bottom: 5px;
+}
+.small_spacer_time{
+    position: absolute;
+    left: 32%;
+    bottom: 5px;
+}
+.small_spacer_tech{
+    position: absolute;
+    left: 50%;
+    bottom: 5px;
+}
+.small_spacer_link{
+    position: absolute;
+    right: 20px;
+    bottom: 5px;
 }
 .list_project{
     position: relative;
@@ -225,13 +247,38 @@ button:hover{
 .list_project_link svg:hover{
     color: blue;
 }
-/* .list_project_link:hover{ */
-/*     color: blue; */
-/* } */
-/* #full_portfolio_list_cont_inner{ */
-/*     position: relative; */
-/*     width: 100%; */
-/*     height: 100%; */
-/*     background-color: black; */
-/* } */
+#sort_by{
+    position: absolute;
+    top: 130px;
+    left: 20px;
+    font-size: .9em;
+}
+#filter_by{
+    position: absolute;
+    top: 170px;
+    left: 20px;
+    font-size: .9em;
+}
+#sort_by_choice{
+    display: inline-block;
+    font-weight: 600;
+    padding-right: 10px;
+}
+#filter_by_choice{
+    display: inline-block;
+    font-weight: 600;
+    padding-right: 10px;
+}
+.full_port_btn{
+    /* position: absolute; */
+    /* left: 20px; */
+    display: inline-block;
+    padding: 5px 10px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 4px;
+}
+.full_projects_sort_by_option{
+    display: none;
+}
 

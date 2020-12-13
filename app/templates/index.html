@@ -55,7 +55,7 @@
     <div class="full-page-spacer">
         <div class="bighello_cont">
             <h4 id="bighello">Hello</h4>
-            <p class="center_text under_big_hello">i'm a junior full stack web developer</p>
+            <p class="center_text under_big_hello">👋 i'm a full stack web developer</p>
             <button id="see_port_btn">See Portfolio</button>
         </div>
         <svg width="30" height="30" fill="currentColor" class="arrow_down" viewBox="0 0 16 16">
@@ -75,7 +75,7 @@
 
     <div class="cont">
         <div id="a1">
-            <p><b><span class="yellow_highlight">Featured</span> Projects:</b><br>projects are clickable - to github
+            <p><b><span class="yellow_highlight">⭐ Featured</span> Projects:</b><br>projects are clickable - to github
             </p>
         </div>
         <div id="projectNexusOrg" class="switchWebsite no2" onclick="window.open('https://gist.github.com/NoahRR/9c12e841502d5dff0fb79a4bc3255d78');"></div>
@@ -87,11 +87,32 @@
     </div>
 
     <div id="full_portfolio_list_cont">
-        <p><b><span class="yellow_highlight">Full</span> Portfolio:</b><br>shows all projects - click to see github repo</p>
-        <div class="small_spacer" style="border-bottom: 1px solid #DBDBDB;"></div>
 
+        <p><b><span class="yellow_highlight">Full</span> Portfolio:</b><br>contains relevant projects that i've completed 🚀</p>
+
+        <div id="sort_by">
+            <p id="sort_by_choice">Sort By:</p>
+            <button id="full_projects_sort_by_btn" class="full_port_btn">My Choice ▼</button>
+        </div>
+        <div id="filter_by">
+            <p id="filter_by_choice">Filter By:</p>
+            <button id="full_projects_filter_by_btn" class="full_port_btn">All ▼</button>
+        </div>
+
+        <div style="height: 100px"></div>
+        <div id="sort_by_op_date" class="full_projects_sort_by_option">Date</div>
+        <div id="sort_by_op_mychoice" class="full_projects_sort_by_option">My Choice</div>
+        <div id="sort_by_op_length" class="full_projects_sort_by_option">Length</div>
+
+        <div class="small_spacer" style="border-bottom: 1px solid #DBDBDB;">
+            <div class="small_spacer_name">Project:</div>
+            <div class="small_spacer_time">Length:</div>
+            <div class="small_spacer_tech">Top Technologies:</div>
+            <div class="small_spacer_link">Links:</div>
+        </div>
+
+        <!-- DISPLAYS ALL PROJECTS IN DATABASE -->
         {% for proj_id in full_project_data %}
-        <!-- <p>{{ full_project_data[proj_id]['name'] }}</p> -->
             <div class="list_project">
                 <div class="list_project_title">{{ full_project_data[proj_id]['name'] }}</div>
                 <div class="list_project_time">{{ full_project_data[proj_id]['time'] }}</div>
@@ -111,35 +132,6 @@
                 </div>
             </div>
         {% endfor %}
-
-        <!-- <div class="list_project"> -->
-        <!--     <div class="list_project_title">NexusOrganizer.com</div> -->
-        <!--     <div class="list_project_time">4 months</div> -->
-        <!--     <div class="list_project_tech">Django | PostgreSQL | JS-HTML-CSS</div> -->
-        <!--     <div class="list_project_link"> -->
-        <!--         <svg onclick="window.open('https://gist.github.com/NoahRR/9c12e841502d5dff0fb79a4bc3255d78', '_blank')" width="18" height="18" fill="currentColor" viewBox="0 0 16 16"> -->
-        <!--             <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/> -->
-        <!--         </svg> -->
-        <!--         <svg onclick="window.open('https://www.nexusorganizer.com/', '_blank')" width="18" height="18" fill="currentColor" viewBox="0 0 16 16"> -->
-        <!--             <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/> -->
-        <!--               <path fill-rule="evenodd" d="M5.172 10.828a.5.5 0 0 0 .707 0l4.096-4.096V9.5a.5.5 0 1 0 1 0V5.525a.5.5 0 0 0-.5-.5H6.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707z"/> -->
-        <!--         </svg> -->
-        <!--     </div> -->
-        <!-- </div> -->
-
-        <!-- <div class="list_project"> -->
-        <!--     <div class="list_project_title">This Website!</div> -->
-        <!--     <div class="list_project_time">2 days</div> -->
-        <!--     <div class="list_project_tech">Flask | SQLite | JS-HTML-CSS</div> -->
-        <!--     <div class="list_project_link"> -->
-        <!--         <svg onclick="window.open('', '_blank')" width="18" height="18" fill="currentColor" viewBox="0 0 16 16"> -->
-        <!--             <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/> -->
-        <!--         </svg> -->
-        <!--     </div> -->
-        <!-- </div> -->
-
-
-
     </div>
 
     <div class="footerCustom">
