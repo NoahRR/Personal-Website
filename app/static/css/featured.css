@@ -1,3 +1,44 @@
+.cont2{
+  display: grid;
+  grid-gap: 1rem;
+  grid-auto-flow: dense;
+  grid-auto-rows: 300px;
+  max-width: 1500px;
+  padding: 20px 20px;
+  border-radius: 10px;
+  position: relative;
+  left: 50%;
+  top: -50px;
+  transform: translateX(-50%);
+}
+.cont2 div{
+  border-radius: 10px;
+  cursor: pointer;
+  transition: filter .4s;
+}
+.cont2 div p{
+    position: relative;
+    text-align: center;
+    top: 50%;
+    padding: 20px;
+    transform: translateY(-50%);
+    font-weight: 600;
+}
+.cont2 div p span{
+    font-weight: 400;
+    color: white;
+}
+.cont2 div i{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+.cont2 div:hover{
+  /*box-shadow: 0px 0px 9px -2px rgba(143,143,143,1);*/
+  box-shadow: 0px 0px 9px -2px black;
+}
 
 .cont{
   display: grid;
@@ -192,10 +233,16 @@
     .cont{
         grid-template-columns: repeat(4, 1fr);
     }
+    .cont2{
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
 @media only screen and (max-width: 1330px) {
     .cont{
         grid-template-columns: repeat(3, 1fr);
+    }
+    .cont2{
+        grid-template-columns: repeat(4, 1fr);
     }
     #projectNexusOrg{
         grid-column: span 2;
@@ -232,6 +279,9 @@
 }
 @media only screen and (max-width: 1015px) {
     .cont{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .cont2{
         grid-template-columns: repeat(2, 1fr);
     }
     #a1{

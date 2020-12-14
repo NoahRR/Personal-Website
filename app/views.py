@@ -2,7 +2,7 @@ from app import app, db
 from app.models import Projects
 from flask import render_template, request
 
-@app.route('/')
+@app.route('/', methods=['GET'])
 def index():
 
     return_projects = {}
@@ -20,6 +20,92 @@ def index():
         }
 
     return render_template('index.html', full_project_data=return_projects)
+
+@app.route('/search', methods=['GET'])
+def search():
+
+    tech_query = request.args.get('tech')
+    filter_type = request.args.get('type')
+
+    # searches for a tech keyword
+    if tech_query:
+
+        return_projects = {}
+        search = "%{}%".format(tech_query)
+        all_projects = Projects.query.filter(Projects.tech.like(search)).all()
+
+        for project in all_projects:
+            return_projects[project.id] = {
+                'name': project.name,
+                'time': project.time,
+                'tech': project.tech,
+                'link': project.link,
+                'link2': project.link2,
+                'date': project.date,
+                'prio': project.prio
+            }
+
+        return render_template('index.html', full_project_data=return_projects, search_query=tech_query)
+
+    # searches for presence of 'CS50' in project name
+    elif filter_type == 'CS50':
+
+        return_projects = {}
+        search = "%{}%".format('CS50')
+        all_projects = Projects.query.filter(Projects.name.like(search)).all()
+
+        for project in all_projects:
+            return_projects[project.id] = {
+                'name': project.name,
+                'time': project.time,
+                'tech': project.tech,
+                'link': project.link,
+                'link2': project.link2,
+                'date': project.date,
+                'prio': project.prio
+            }
+
+        return render_template('index.html', full_project_data=return_projects, show='CS50')
+
+    # searches for lack of presence of 'CS50' in project name
+    elif filter_type == 'NOT-CS50':
+
+        return_projects = {}
+        search = "%{}%".format('CS50')
+        all_projects = Projects.query.filter(Projects.name.notlike(search)).all()
+
+        for project in all_projects:
+            return_projects[project.id] = {
+                'name': project.name,
+                'time': project.time,
+                'tech': project.tech,
+                'link': project.link,
+                'link2': project.link2,
+                'date': project.date,
+                'prio': project.prio
+            }
+
+        return render_template('index.html', full_project_data=return_projects, show='NOT-CS50')
+
+    # returns everything
+    else:
+
+        return_projects = {}
+        all_projects = Projects.query.all()
+
+        for project in all_projects:
+            return_projects[project.id] = {
+                'name': project.name,
+                'time': project.time,
+                'tech': project.tech,
+                'link': project.link,
+                'link2': project.link2,
+                'date': project.date,
+                'prio': project.prio
+            }
+
+        return render_template('index.html', full_project_data=return_projects)
+
 
 @app.route('/dev/projects', methods=['GET', 'POST', 'PUT', 'DELETE'])
 def projects():

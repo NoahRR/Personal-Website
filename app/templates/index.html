@@ -32,12 +32,12 @@
 
     <div id="fakeHeader">
         <div class="fakeHeaderLeft">
-            <div><span id="fakeHeaderLeftHOME">NoahRayRoberts</span></div>
+            <div><span id="fakeHeaderLeftHOME" onclick="document.querySelector('#big_body').scrollIntoView({behavior: 'smooth'});">NoahRayRoberts</span></div>
         </div>
         <div class="fakeheaderRight">
-            <div><span id="fakeHeaderPortfolio">Portfolio</span></div>
-            <div><span class="fakeHeaderAbout">About Me</span></div>
-            <div><span class="fakeHeaderSocial">Social/Contact</span></div>
+            <div><span id="fakeHeaderPortfolio" onclick="document.querySelector('#Portfolio_highlights_loc').scrollIntoView({behavior: 'smooth'});">Portfolio</span></div>
+            <div><span class="fakeHeaderAbout" onclick="document.querySelector('#About_me_loc').scrollIntoView({behavior: 'smooth'});">About Me</span></div>
+            <div><span class="fakeHeaderSocial" onclick="document.querySelector('#contact_footer_loc').scrollIntoView({behavior: 'smooth'});">Social/Contact</span></div>
         </div>
         <svg width="20" height="20" class="bi bi-list hamRightHeader hamham" viewBox="0 0 16 16">
             <path fill-rule="evenodd" d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
@@ -45,9 +45,9 @@
     </div>
 
     <div class="hamRightHeader-dropdown">
-        <div><span id="fakeHeaderPortfolioH">Portfolio</span></div>
-        <div><span class="fakeHeaderAboutH">About Me</span></div>
-        <div><span class="fakeHeaderSocialH">Social/Contact</span></div>
+        <div><span id="fakeHeaderPortfolioH" onclick="document.querySelector('#Portfolio_highlights_loc').scrollIntoView({behavior: 'smooth'});">Portfolio</span></div>
+        <div><span class="fakeHeaderAboutH" onclick="document.querySelector('#About_me_loc').scrollIntoView({behavior: 'smooth'});">About Me</span></div>
+        <div><span class="fakeHeaderSocialH" onclick="document.querySelector('#contact_footer_loc').scrollIntoView({behavior: 'smooth'});">Social/Contact</span></div>
         <div><span class="exitFake"><i class="fas fa-times"></i></span></div>
     </div>
     <div class="greyout"></div>
@@ -56,26 +56,26 @@
         <div class="bighello_cont">
             <h4 id="bighello">Hello</h4>
             <p class="center_text under_big_hello">👋 i'm a full stack web developer</p>
-            <button id="see_port_btn">See Portfolio</button>
+            <button id="see_port_btn" onclick="document.querySelector('#Portfolio_highlights_loc').scrollIntoView({behavior: 'smooth'});">See Portfolio</button>
         </div>
         <svg width="30" height="30" fill="currentColor" class="arrow_down" viewBox="0 0 16 16">
             <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4z"/>
-            <!-- <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/> -->
         </svg>
     </div>
 
-    <div class="center_header" id="Portfolio_highlights_loc">
+    <div class="center_header">
+        <div id="Portfolio_highlights_loc" style="top: 30px; height: 5px; width: 5px; position: absolute; z-index: -10;"></div>
         <div class="center_header_cont">
             <h4>Full Stack Web Developer?</h4>
             <p>I design stunning websites & code advanced funcitonality into them,
              check out my projects below!</p>
-            <button class="see_resume_btn">See Resume</button>
+            <button class="see_resume_btn" onclick="window.open('https://drive.google.com/file/d/1qZ7sTecy2ftDcbx9aJuqS7yiZqJU3iyi/view?usp=sharing', '_blank');">See Resume</button>
         </div>
     </div>
 
     <div class="cont">
         <div id="a1">
-            <p><b><span class="yellow_highlight">⭐ Featured</span> Projects:</b><br>projects are clickable - to github
+            <p><b style="font-size: 1.2em;"><span class="yellow_highlight">⭐ Featured</span> Projects:</b><br>projects are clickable - to github
             </p>
         </div>
         <div id="projectNexusOrg" class="switchWebsite no2" onclick="window.open('https://gist.github.com/NoahRR/9c12e841502d5dff0fb79a4bc3255d78');"></div>
@@ -88,21 +88,64 @@
 
     <div id="full_portfolio_list_cont">
 
-        <p><b><span class="yellow_highlight">Full</span> Portfolio:</b><br>contains relevant projects that i've completed 🚀</p>
+        <div id="to_full_port"></div>
 
-        <div id="sort_by">
-            <p id="sort_by_choice">Sort By:</p>
-            <button id="full_projects_sort_by_btn" class="full_port_btn">My Choice ▼</button>
-        </div>
+        <p style="line-height: 25px;"><b style="font-size: 1.3em;"><span class="yellow_highlight">Full</span> Portfolio:</b><br>contains relevant projects that i've completed 🚀</p>
+
+        <form id="form_search_tech" action="/search#to_full_port" method="get">
+            {% if search_query %}
+                <div id="search_tech_mimic">
+                    <input name="tech" id="search_tech" placeholder="{{search_query}}">
+                    <button type="button" id="clear_search" onclick="window.location.href = '/#to_full_port'">clear</button>
+                </div>
+            {% else %}
+                <input name="tech" id="search_tech" placeholder="search for a specific technology!">
+            {% endif %}
+        </form>
+
+        <p style="color: grey; display: inline-block; padding: 0 20px;">or</p>
+
         <div id="filter_by">
-            <p id="filter_by_choice">Filter By:</p>
-            <button id="full_projects_filter_by_btn" class="full_port_btn">All ▼</button>
+            <p id="filter_by_choice">Show:</p>
+
+            {% if search_query %}
+                <div id="full_projects_filter_by_btn">
+                    <button>Search Query ▼</button>
+                    <div id="filter_by_choices">
+                        <div onclick="window.location.href='/#to_full_port'"><p>All</p></div>
+                        <div onclick="window.location.href='/search?type=CS50#to_full_port'"><p>All CS50</p></div>
+                        <div onclick="window.location.href='/search?type=NOT-CS50#to_full_port'"><p>All non-CS50</p></div>
+                    </div>
+                </div>
+            {% elif show == 'CS50' %}
+                <div id="full_projects_filter_by_btn">
+                    <button>All CS50 ▼</button>
+                    <div id="filter_by_choices">
+                        <div onclick="window.location.href='/#to_full_port'"><p>All</p></div>
+                        <div onclick="window.location.href='/search?type=NOT-CS50#to_full_port'"><p>All non-CS50</p></div>
+                    </div>
+                </div>
+            {% elif show == 'NOT-CS50' %}
+                <div id="full_projects_filter_by_btn">
+                    <button>All non-CS50 ▼</button>
+                    <div id="filter_by_choices">
+                        <div onclick="window.location.href='/#to_full_port'"><p>All</p></div>
+                        <div onclick="window.location.href='/search?type=CS50#to_full_port'"><p>All CS50</p></div>
+                    </div>
+                </div>
+            {% else %}
+                <div id="full_projects_filter_by_btn">
+                    <button>All ▼</button>
+                    <div id="filter_by_choices">
+                        <div onclick="window.location.href='/search?type=CS50#to_full_port'"><p>All CS50</p></div>
+                        <div onclick="window.location.href='/search?type=NOT-CS50#to_full_port'"><p>All non-CS50</p></div>
+                    </div>
+                </div>
+            {% endif %}
         </div>
 
-        <div style="height: 100px"></div>
-        <div id="sort_by_op_date" class="full_projects_sort_by_option">Date</div>
-        <div id="sort_by_op_mychoice" class="full_projects_sort_by_option">My Choice</div>
-        <div id="sort_by_op_length" class="full_projects_sort_by_option">Length</div>
+
+        <!-- <div style="height: 100px"></div> -->
 
         <div class="small_spacer" style="border-bottom: 1px solid #DBDBDB;">
             <div class="small_spacer_name">Project:</div>
@@ -134,7 +177,54 @@
         {% endfor %}
     </div>
 
-    <div class="footerCustom">
+    <!-- <div class="cont2" style="top: -75px;"> -->
+    <!--     <div style="background-color: #0072b1;"> -->
+    <!--         <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="white" class="bi bi-linkedin" viewBox="0 0 16 16"> -->
+    <!--             <path fill-rule="evenodd" d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212h-2.4s.03-6.547 0-7.225h2.4v1.023a5.54 5.54 0 0 0-.016.025h.016v-.025c.32-.493.89-1.193 2.165-1.193 1.58 0 2.764 1.033 2.764 3.252v4.143h-2.4V9.529c0-.972-.348-1.634-1.217-1.634-.664 0-1.059.447-1.233.878-.063.154-.079.37-.079.586v4.035z"/> -->
+    <!--         </svg> -->
+    <!--     </div> -->
+    <!--     <div style="background-color: #CDCDCD;"> -->
+    <!--         <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="white" class="bi bi-github" viewBox="0 0 16 16"> -->
+    <!--             <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/> -->
+    <!--         </svg> -->
+    <!--     </div> -->
+    <!--     <div style="background-color: #E44D4D;"> -->
+    <!--         <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="white" class="bi bi-youtube" viewBox="0 0 16 16"> -->
+    <!--             <path fill-rule="evenodd" d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.122C.002 7.343.01 6.6.064 5.78l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"/> -->
+    <!--         </svg> -->
+    <!--     </div> -->
+    <!--     <div style="background-color: #F7B500;"> -->
+    <!--         <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="white" class="bi bi-youtube" viewBox="0 0 16 16"> -->
+    <!--             <path fill-rule="evenodd" d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z"/> -->
+    <!--         </svg> -->
+    <!--     </div> -->
+    <!-- </div> -->
+
+    <svg width="30" height="30" fill="currentColor" class="arrow_down2" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4z"/>
+    </svg>
+
+    <div class="center_header" style="margin-top: -20px;">
+        <div class="center_header_cont">
+            <div id="About_me_loc" style="top: -50px; height: 5px; width: 5px; position: absolute; z-index: -10;"></div>
+            <h4>A Little About <span class="yellowtxt">Me...</span></h4>
+            <p>Web Developer | Philosopher | Musician</p>
+        </div>
+    </div>
+
+    <div class="abt_txt">
+        I’ve always had a fascination with creation. Ever since I could use my hands I’ve been making things. It started out as stacking food as a toddler, to building things out of paper and cardboard, to building with legos, to woodworking, to programming on my graphing calculator in middle school, to programming video games in high school.<br><br>
+
+And more recently, my career aspirations started with CS50x (Harvard’s online intro to CS class). This course taught me the fundamentals of programming. “This course teaches students how to think algorithmically and solve problems efficiently. Topics include abstraction, algorithms, data structures, encapsulation, resource management, security, and software engineering. Languages include C, Python, and SQL plus students’ choice of: HTML, CSS, and JavaScript (for web development); …” – taken from CS50x website.<br><br>
+
+Once I completed CS50, I decided I was going to fully develop a web application. I needed to choose something that solved a genuine problem of mine so that regardless of how successful the app ended up being, it would provide value to me. The problem I chose to solve was my lack of a proper tool to store ideas – particularly for research (but also for the likes of philosophy and writing). As I would consistently find myself forgetting ideas that I had previously discovered, thus having to re-research them. Very annoying.<br><br>
+
+Four months later, NexusOrganizer.com was born. And I’m happy to say that I use this app every day!<br><br>
+
+Now, I am excitedly searching for employment opportunities!
+    </div>
+
+    <div class="footerCustom" id="contact_footer_loc">
         <div class="footerCustom_inside">
             <div class="footerCustomLeft footersty">
                 <div>

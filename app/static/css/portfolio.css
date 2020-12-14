@@ -20,7 +20,9 @@
   --lightorange: #FFB052;
   --dark_grey: #4D4D4D;
   --grey: #DBDBDB;
+  --grey2: #CDCDCD; /*lil darker*/
   --light_grey1: #F1F1F1;
+  --light_grey2: #E1E1E1; /*lil darker*/
 }
 
 #big_body{
@@ -127,6 +129,8 @@ button:hover{
     text-align: center;
     margin: 0;
     padding: 0;
+    margin-top: 40px;
+    /* margin-bottom: 20px; */
 }
 .center_header_cont{
     position: absolute;
@@ -148,12 +152,18 @@ button:hover{
     transform: translate(-50%, -50%);
     font-weight: 800;
 }
+.arrow_down2{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 90px 0 0 0;
+}
 #full_portfolio_list_cont{
     position: relative;
     height: auto;
     width: calc(100% - 40px - 40px );
     max-width: calc(1500px - 40px);
-    top: -50px;
+    top: -53px;
     left: 50%;
     transform: translateX(-50%);
     border-radius: 10px;
@@ -206,8 +216,10 @@ button:hover{
     transform: translateY(-50%);
     text-overflow: ellipsis;
     overflow: hidden;
-    max-width: 230px;
+    min-width: 150px;
+    max-width: 28%;
     white-space: nowrap;
+    text-align: left;
 }
 .list_project_time{
     position: absolute;
@@ -216,7 +228,7 @@ button:hover{
     transform: translateY(-50%);
     text-overflow: ellipsis;
     overflow: hidden;
-    max-width: 135px;
+    max-width: 15%;
     white-space: nowrap;
 }
 .list_project_tech{
@@ -226,7 +238,7 @@ button:hover{
     transform: translateY(-50%);
     text-overflow: ellipsis;
     overflow: hidden;
-    max-width: 320px;
+    max-width: 42%;
     white-space: nowrap;
 }
 .list_project_link{
@@ -254,9 +266,10 @@ button:hover{
     font-size: .9em;
 }
 #filter_by{
-    position: absolute;
-    top: 170px;
-    left: 20px;
+    /* position: absolute; */
+    /* top: 170px; */
+    /* left: 20px; */
+    display: inline-block;
     font-size: .9em;
 }
 #sort_by_choice{
@@ -269,7 +282,60 @@ button:hover{
     font-weight: 600;
     padding-right: 10px;
 }
-.full_port_btn{
+.full_projects_sort_by_option{
+    display: none;
+}
+#search_tech{
+    border: 2px solid var(--light_grey2);
+    border-radius: 5px;
+    padding: 8px 12px;
+    display: inline-block;
+    width: 250px;
+    margin: 20px 0px;
+}
+#search_tech_mimic{
+    display: inline-block;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+#form_search_tech{
+    display: inline-block;
+}
+#to_full_port{
+    position: absolute; 
+    top: -60px; 
+    background-color: pink; 
+    height: 2px; 
+    width: 2px;
+    z-index: -10;
+    user-select: none;
+}
+
+#filter_by_choices{
+    display: none;
+    position: absolute;
+    border-radius: 10px;
+    background-color: white;
+    z-index: 100;
+    padding: 5px 5px;
+}
+#filter_by_choices div{
+    /* border: 1px solid grey; */
+    text-align: center;
+    position: relative;
+    height: 25px;
+    width: 150px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+#filter_by_choices div:hover{
+    background-color: var(--light_grey1);
+}
+#filter_by_choices div p {
+    transform: translateY(-60%);
+}
+#full_projects_filter_by_btn{
     /* position: absolute; */
     /* left: 20px; */
     display: inline-block;
@@ -277,8 +343,150 @@ button:hover{
     cursor: pointer;
     z-index: 10;
     border-radius: 4px;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    height: auto;
 }
-.full_projects_sort_by_option{
-    display: none;
+#full_projects_filter_by_btn button{
+    display: inline-block;
+    padding: 5px 10px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 4px;
+}
+#full_projects_filter_by_btn:hover #filter_by_choices {display: block;}
+#full_projects_filter_by_btn:hover button {background-color: black;}
+
+#clear_search{
+    position: absolute;
+    top: 50%;
+    right: -20px;
+    transform: translate(-50%, -50%);
+    padding: 5px 10px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 4px;
+    margin: 0;
+    padding: 5px 8px;
+    font-size: .9em;
+}
+.cont2 svg{
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+#About_me_block{
+    position: relative;
+    margin-top: -50px;
+    height: auto;
+    width: 100%;
+    background-color: pink;
+}
+.about_left{
+    position: relative;
+    left: 0;
+    width: 20%;
+    height: 100%;
+    overflow: hidden;
+    float: left;
+    display: inline-block;
+}
+.about_left img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: auto;
+    width: 80%;
+    border-radius: 10px;
+}
+.about_right{
+    position: relative;
+    right: 0;
+    background-color: red;
+    width: 80%;
+    height: auto;
+    overflow: hidden;
+    float: right;
+    display: inline-block;
+}
+.abt_txt{
+    position: relative;
+    line-height: 30px;
+    width: 80%;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-bottom: 50px;
 }
 
+
+@media only screen and (max-width: 1250px) {
+    .list_project_title{
+        max-width: 25%;
+    }
+    .list_project_time{
+        max-width: 13%;
+    }
+    .list_project_tech{
+        max-width: 37%;
+    }
+}
+@media only screen and (max-width: 800px) {
+    .small_spacer_time{
+        display: none;
+    }
+    .list_project_time{
+        display: none;
+    }
+    .small_spacer_tech{
+        left: 32%;
+    }
+    .list_project_tech{
+        left: 32%;
+        max-width: 50%;
+    }
+}
+@media only screen and (max-width: 700px) {
+    .list_project_tech{
+        left: 200px;
+        max-width: 45%;
+    }
+    .small_spacer_tech{
+        left: 200px;
+    }
+}
+@media only screen and (max-width: 630px) {
+    .list_project_tech{
+        max-width: 37%;
+    }
+}
+@media only screen and (max-width: 560px) {
+    .small_spacer_tech{
+        display: none;
+    }
+    .list_project_tech{
+        display: none;
+    }
+    .list_project_title{
+        max-width: 70%;
+    }
+}
+@media only screen and (max-width: 475px) {
+    .list_project_title{
+        max-width: 60%;
+    }
+}
+@media only screen and (max-width: 360px) {
+    .list_project_title{
+        max-width: 50%;
+        min-width: 0px;
+    }
+}
+@media only screen and (max-width: 315px) {
+    .list_project_title{
+        max-width: 40%;
+    }
+}
