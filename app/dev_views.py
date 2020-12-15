@@ -3,7 +3,9 @@ from app.models import Projects
 from flask import render_template, request
 from app.authorization import authentication_required
 
-# JSON API I use to update the project database easily
+### AUTHENTICATION LOGIC IS NOT INCLUDED IN PUBLIC REPOSITORY FOR SECURITY REASONS
+
+# API I use to update the project database easily
 @app.route('/dev/projects', methods=['GET', 'POST', 'PUT', 'DELETE'])
 @authentication_required
 def projects():
