@@ -29,81 +29,46 @@ def search():
 
     # searches for a tech keyword
     if tech_query:
-
         return_projects = {}
         search = "%{}%".format(tech_query)
         all_projects = Projects.query.filter(Projects.tech.like(search)).order_by(Projects.prio.desc())
 
-        for project in all_projects:
-            return_projects[project.id] = {
-                'name': project.name,
-                'time': project.time,
-                'tech': project.tech,
-                'link': project.link,
-                'link2': project.link2,
-                'date': project.date,
-                'prio': project.prio
-            }
-
-        return render_template('index.html', full_project_data=return_projects, search_query=tech_query)
-
     # searches for presence of 'CS50' in project name
     elif filter_type == 'CS50':
-
         return_projects = {}
         search = "%{}%".format('CS50')
         all_projects = Projects.query.filter(Projects.name.like(search)).order_by(Projects.prio.desc())
 
-        for project in all_projects:
-            return_projects[project.id] = {
-                'name': project.name,
-                'time': project.time,
-                'tech': project.tech,
-                'link': project.link,
-                'link2': project.link2,
-                'date': project.date,
-                'prio': project.prio
-            }
-
-        return render_template('index.html', full_project_data=return_projects, show='CS50')
-
     # searches for lack of presence of 'CS50' in project name
     elif filter_type == 'NOT-CS50':
-
         return_projects = {}
         search = "%{}%".format('CS50')
         all_projects = Projects.query.filter(Projects.name.notlike(search)).order_by(Projects.prio.desc())
 
-        for project in all_projects:
-            return_projects[project.id] = {
-                'name': project.name,
-                'time': project.time,
-                'tech': project.tech,
-                'link': project.link,
-                'link2': project.link2,
-                'date': project.date,
-                'prio': project.prio
-            }
-
-        return render_template('index.html', full_project_data=return_projects, show='NOT-CS50')
-
     # returns everything
     else:
-
         return_projects = {}
         all_projects = Projects.query.order_by(Projects.prio.desc())
 
-        for project in all_projects:
-            return_projects[project.id] = {
-                'name': project.name,
-                'time': project.time,
-                'tech': project.tech,
-                'link': project.link,
-                'link2': project.link2,
-                'date': project.date,
-                'prio': project.prio
-            }
 
+    # turns query into usable data format
+    for project in all_projects:
+        return_projects[project.id] = {
+            'name': project.name,
+            'time': project.time,
+            'tech': project.tech,
+            'link': project.link,
+            'link2': project.link2,
+            #  'date': project.date,
+            #  'prio': project.prio
+        }
+
+    # return correct data to front-end
+    if tech_query:
+        return render_template('index.html', full_project_data=return_projects, search_query=tech_query)
+    elif filter_type:
+        return render_template('index.html', full_project_data=return_projects, show=filter_type)
+    else:
         return render_template('index.html', full_project_data=return_projects)
 
 
