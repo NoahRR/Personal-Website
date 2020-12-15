@@ -42,7 +42,7 @@ p{font-size: 1em}
 h1{font-size: 1.3em}
 h2{font-size: 1.5em}
 h3{font-size: 1.8em}
-h4{font-size: 2.1em}
+h4{font-size: 2.1em; padding: 0; margin: 0; padding-bottom: 5px;}
 
 /**/
 /**/
@@ -122,14 +122,17 @@ button:hover{
 .center_header{
     position: relative;
     width: 90%;
-    height: 350px;
-    top: 0;
+    height: auto;
+    /* min-height: 350px; */
+    /* top: 0; */
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
     margin: 0;
     padding: 0;
-    margin-top: 40px;
+    margin-top: 110px;
+    margin-bottom: 25px;
+    /* background-color: blue; */
     /* margin-bottom: 20px; */
 }
 .center_header_cont{
@@ -163,7 +166,7 @@ button:hover{
     height: auto;
     width: calc(100% - 40px - 40px );
     max-width: calc(1500px - 40px);
-    top: -53px;
+    top: -2px;
     left: 50%;
     transform: translateX(-50%);
     border-radius: 10px;
@@ -416,10 +419,13 @@ button:hover{
     position: relative;
     line-height: 30px;
     width: 80%;
-    top: -50px;
+    top: 0px;
     left: 50%;
     transform: translateX(-50%);
-    padding-bottom: 50px;
+    padding: 20px 0 50px 0;
+}
+.bi-email{
+    display: none;
 }
 
 
@@ -457,6 +463,9 @@ button:hover{
     .small_spacer_tech{
         left: 200px;
     }
+    #bighello{
+        font-size: 9em; 
+    }
 }
 @media only screen and (max-width: 630px) {
     .list_project_tech{
@@ -478,15 +487,43 @@ button:hover{
     .list_project_title{
         max-width: 60%;
     }
+    #bighello{
+        font-size: 7em; 
+    }
+    #email_footer{
+        display: none;
+    }
+    .bi-email{
+        display: unset;
+    }
+}
+@media only screen and (max-width: 380px) {
+    #search_tech{
+        width: 60vw;
+    }
 }
 @media only screen and (max-width: 360px) {
     .list_project_title{
         max-width: 50%;
         min-width: 0px;
     }
+    #bighello{
+        font-size: 5em; 
+    }
 }
 @media only screen and (max-width: 315px) {
     .list_project_title{
         max-width: 40%;
+    }
+    #search_tech{
+        width: 40vw;
+    }
+}
+@media only screen and (max-width: 275px) {
+    #bighello{
+        font-size: 3em; 
+    }
+    #full_stack_header{
+        font-size: 1.5em;        
     }
 }

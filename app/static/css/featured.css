@@ -52,7 +52,7 @@
   border-radius: 10px;
   position: relative;
   left: 50%;
-  top: -50px;
+  /* top: -50px; */
   transform: translateX(-50%);
   /* padding-bottom: 0; */
   /* background-color: #F6F6F6; */

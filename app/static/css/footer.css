@@ -24,6 +24,7 @@
     height: auto;
     margin: 0 23px;
     width: auto;
+    white-space: nowrap;
 }
 .footerCustomLeft div a{
     position: relative;
@@ -44,6 +45,9 @@
 }
 .bi-youtube:hover{
     color: #c4302b;
+}
+.bi-email:hover{
+    color: #f7b500;
 }
 .iconENVY{
     display: none !important;

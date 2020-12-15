@@ -26,6 +26,7 @@ document.querySelector('.greyout').addEventListener('click', function() {
 document.querySelector('.exitFake').addEventListener('click', function() {
     removeFake();
 });
+// exits mobile header menu
 function removeFake() {
     document.querySelector('.hamRightHeader-dropdown').style.display = 'none';
     document.querySelector('.greyout').style.display = 'none';

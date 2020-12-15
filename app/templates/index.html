@@ -44,10 +44,11 @@
         </svg>
     </div>
 
+    <!-- mobile header menu -->
     <div class="hamRightHeader-dropdown">
-        <div><span id="fakeHeaderPortfolioH" onclick="document.querySelector('#Portfolio_highlights_loc').scrollIntoView({behavior: 'smooth'});">Portfolio</span></div>
-        <div><span class="fakeHeaderAboutH" onclick="document.querySelector('#About_me_loc').scrollIntoView({behavior: 'smooth'});">About Me</span></div>
-        <div><span class="fakeHeaderSocialH" onclick="document.querySelector('#contact_footer_loc').scrollIntoView({behavior: 'smooth'});">Social/Contact</span></div>
+        <div><span id="fakeHeaderPortfolioH" onclick="document.querySelector('#Portfolio_highlights_loc').scrollIntoView({behavior: 'smooth'}); removeFake();">Portfolio</span></div>
+        <div><span class="fakeHeaderAboutH" onclick="document.querySelector('#About_me_loc').scrollIntoView({behavior: 'smooth'}); removeFake();">About Me</span></div>
+        <div><span class="fakeHeaderSocialH" onclick="document.querySelector('#contact_footer_loc').scrollIntoView({behavior: 'smooth'}); removeFake();">Social/Contact</span></div>
         <div><span class="exitFake"><i class="fas fa-times"></i></span></div>
     </div>
     <div class="greyout"></div>
@@ -64,13 +65,13 @@
     </div>
 
     <div class="center_header">
-        <div id="Portfolio_highlights_loc" style="top: 30px; height: 5px; width: 5px; position: absolute; z-index: -10;"></div>
-        <div class="center_header_cont">
-            <h4>Full Stack Web Developer?</h4>
+        <div id="Portfolio_highlights_loc" style="top: -80px; height: 5px; width: 5px; position: absolute; z-index: -10;"></div>
+        <!-- <div class="center_header_cont"> -->
+            <h4 id="full_stack_header">Full Stack Web Developer?</h4>
             <p>I design stunning websites & code advanced funcitonality into them,
              check out my projects below!</p>
             <button class="see_resume_btn" onclick="window.open('https://drive.google.com/file/d/1qZ7sTecy2ftDcbx9aJuqS7yiZqJU3iyi/view?usp=sharing', '_blank');">See Resume</button>
-        </div>
+        <!-- </div> -->
     </div>
 
     <div class="cont">
@@ -144,9 +145,6 @@
             {% endif %}
         </div>
 
-
-        <!-- <div style="height: 100px"></div> -->
-
         <div class="small_spacer" style="border-bottom: 1px solid #DBDBDB;">
             <div class="small_spacer_name">Project:</div>
             <div class="small_spacer_time">Length:</div>
@@ -204,12 +202,12 @@
         <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4z"/>
     </svg>
 
-    <div class="center_header" style="margin-top: -20px;">
-        <div class="center_header_cont">
-            <div id="About_me_loc" style="top: -50px; height: 5px; width: 5px; position: absolute; z-index: -10;"></div>
+    <div class="center_header" style="margin-top: 90px;">
+        <!-- <div class="center_header_cont"> -->
+            <div id="About_me_loc" style="top: -80px; height: 5px; width: 5px; position: absolute; z-index: -10;"></div>
             <h4>A Little About <span class="yellowtxt">Me...</span></h4>
             <p>Web Developer | Philosopher | Musician</p>
-        </div>
+        <!-- </div> -->
     </div>
 
     <div class="abt_txt">
@@ -243,10 +241,16 @@ Now, I am excitedly searching for employment opportunities!
                             <path fill-rule="evenodd" d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.122C.002 7.343.01 6.6.064 5.78l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"/>
                         </svg>
                     </a>
+                    <a target="_blank" href="mailto:noahray216@gmail.com">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-email" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z"/>
+                        </svg>
+                    </a>
+
                 </div>
             </div>
             <div class="footerCustomRight footersty">
-                <div><a style="text-decoration: none; letter-spacing: .5px;" href="mailto:noahray216@gmail.com">noahray216@gmail.com</a></div>
+                <div><a id="email_footer" style="text-decoration: none; letter-spacing: .5px;" href="mailto:noahray216@gmail.com">noahray216@gmail.com</a></div>
             </div>
         </div>
     </div>
