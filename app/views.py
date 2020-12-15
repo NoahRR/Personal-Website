@@ -6,7 +6,7 @@ from flask import render_template, request
 def index():
 
     return_projects = {}
-    all_projects = Projects.query.all()
+    all_projects = Projects.query.order_by(Projects.prio.desc())
 
     for project in all_projects:
         return_projects[project.id] = {
@@ -32,7 +32,7 @@ def search():
 
         return_projects = {}
         search = "%{}%".format(tech_query)
-        all_projects = Projects.query.filter(Projects.tech.like(search)).all()
+        all_projects = Projects.query.filter(Projects.tech.like(search)).order_by(Projects.prio.desc())
 
         for project in all_projects:
             return_projects[project.id] = {
@@ -52,7 +52,7 @@ def search():
 
         return_projects = {}
         search = "%{}%".format('CS50')
-        all_projects = Projects.query.filter(Projects.name.like(search)).all()
+        all_projects = Projects.query.filter(Projects.name.like(search)).order_by(Projects.prio.desc())
 
         for project in all_projects:
             return_projects[project.id] = {
@@ -72,7 +72,7 @@ def search():
 
         return_projects = {}
         search = "%{}%".format('CS50')
-        all_projects = Projects.query.filter(Projects.name.notlike(search)).all()
+        all_projects = Projects.query.filter(Projects.name.notlike(search)).order_by(Projects.prio.desc())
 
         for project in all_projects:
             return_projects[project.id] = {
@@ -91,7 +91,7 @@ def search():
     else:
 
         return_projects = {}
-        all_projects = Projects.query.all()
+        all_projects = Projects.query.order_by(Projects.prio.desc())
 
         for project in all_projects:
             return_projects[project.id] = {
