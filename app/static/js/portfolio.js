@@ -30,25 +30,3 @@ function removeFake() {
     document.querySelector('.hamRightHeader-dropdown').style.display = 'none';
     document.querySelector('.greyout').style.display = 'none';
 };
-
-// Location Changes
-// document.querySelector('#see_port_btn').addEventListener('click', function() {
-//     document.querySelector('#Portfolio_highlights_loc').scrollIntoView({behavior: 'smooth'});
-// });
-// document.querySelector('#fakeHeaderLeftHOME').addEventListener('click', function() {
-//     document.querySelector('#big_body').scrollIntoView({behavior: 'smooth'});
-//     removeFake();
-// });
-// document.querySelector('#fakeHeaderPortfolioH').addEventListener('click', function() {
-//     document.querySelector('#Portfolio_highlights_loc').scrollIntoView({behavior: 'smooth'});
-//     removeFake();
-// });
-// document.querySelector('#fakeHeaderPortfolio').addEventListener('click', function() {
-//     document.querySelector('#Portfolio_highlights_loc').scrollIntoView({behavior: 'smooth'});
-//     removeFake();
-// });
-
-// full portfolio filter by
-// document.querySelector('#filter_by').addEventListener('mouseover', function() {
-//     document.querySelector('#filter_by_choices').style.display = 'block'
-// });
