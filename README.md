@@ -12,5 +12,7 @@ Portfolio | About Me | Contact Info
 ### Interested in how the site runs?
 - Clone repository
 - install requirements from requirements.txt and package.json (using pip and npm respectively)
+- Run 'grunt concat' to generate concatenated css file that is linked in index.html
+- Insert authentication files, if applicable
 - Run 'python3 run.py' for classic flask dev server
 - Run the classic flask dev server, then run: 'grunt browserSync' for live reload dev server (proxy using BrowserSync)
