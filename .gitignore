@@ -3,3 +3,6 @@ node_modules
 env
 app/authorization.py
 app/static/css/CONCAT_CSS.css
+.htaccess
+passenger_wsgi.py
+tmp/

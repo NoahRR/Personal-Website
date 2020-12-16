@@ -117,7 +117,7 @@ FEATURED.CSS
 #projectNexusOrg{
     grid-column: span 3;
     grid-row: span 2;
-    background-image: url("https://noahrayroberts.com/wp-content/uploads/2020/11/Screen-Shot-2020-11-17-at-3.48.20-PM.png");
+    background-image: url("https://noahrayroberts.com/static/images/firstNEXUS.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -125,7 +125,7 @@ FEATURED.CSS
 }
 #outdatedportfolio{
     grid-column: span 1;
-    background-image: url('https://noahrayroberts.com/wp-content/uploads/2020/11/Screen-Shot-2020-11-17-at-11.28.46-AM.png');
+    background-image: url("https://noahrayroberts.com/static/images/firstNEXUS.png");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;

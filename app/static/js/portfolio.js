@@ -1,15 +1,15 @@
 // NEXUS ORGANIZER gif play
 document.querySelector('.no1').addEventListener('mouseover', function() {
-    this.style.backgroundImage = 'url(https://noahrayroberts.com/wp-content/uploads/2020/11/Webp.net-gifmaker-3-2.gif)';
+    this.style.backgroundImage = 'url(https://noahrayroberts.com/static/images/NEXUSORGANIZER.gif)';
 });
 document.querySelector('.no1').addEventListener('mouseout', function() {
-    this.style.backgroundImage = 'url(https://noahrayroberts.com/wp-content/uploads/2020/11/Screen-Shot-2020-11-17-at-3.48.20-PM.png)';
+    this.style.backgroundImage = 'url(https://noahrayroberts.com/static/images/firstNEXUS.png)';
 });
 document.querySelector('.no2').addEventListener('mouseover', function() {
-    this.style.backgroundImage = 'url(https://noahrayroberts.com/wp-content/uploads/2020/11/Webp.net-gifmaker-3-2.gif)';
+    this.style.backgroundImage = 'url(https://noahrayroberts.com/static/images/NEXUSORGANIZER.gif)';
 });
 document.querySelector('.no2').addEventListener('mouseout', function() {
-    this.style.backgroundImage = 'url(https://noahrayroberts.com/wp-content/uploads/2020/11/Screen-Shot-2020-11-17-at-3.48.20-PM.png)';
+    this.style.backgroundImage = 'url(https://noahrayroberts.com/static/images/firstNEXUS.png)';
 });
 
 
