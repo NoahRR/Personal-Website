@@ -13,4 +13,4 @@ Portfolio | About Me | Contact Info
 - Clone repository
 - install requirements from requirements.txt and package.json (using pip and npm respectively)
 - Run 'python3 run.py' for classic flask dev server
-- Run the classic flask dev server, then: 'grunt' for live reload dev server (proxy using BrowserSync)
+- Run the classic flask dev server, then run: 'grunt browserSync' for live reload dev server (proxy using BrowserSync)
