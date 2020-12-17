@@ -22,7 +22,7 @@ def index():
             'prio': project.prio
         }
 
-    return render_template('index.html', full_project_data=return_projects)
+    return render_template('index.html', full_project_data=return_projects), 200
 
 @app.route('/search', methods=['GET'])
 def search():
@@ -68,10 +68,10 @@ def search():
 
     # return correct data to front-end
     if tech_query:
-        return render_template('index.html', full_project_data=return_projects, search_query=tech_query)
+        return render_template('index.html', full_project_data=return_projects, search_query=tech_query), 200
     elif filter_type:
-        return render_template('index.html', full_project_data=return_projects, show=filter_type)
+        return render_template('index.html', full_project_data=return_projects, show=filter_type), 200
     else:
-        return render_template('index.html', full_project_data=return_projects)
+        return render_template('index.html', full_project_data=return_projects), 200
 
 
