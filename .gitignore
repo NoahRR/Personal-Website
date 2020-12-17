@@ -6,3 +6,4 @@ app/static/css/CONCAT_CSS.css
 .htaccess
 passenger_wsgi.py
 tmp/
+robots.txt
